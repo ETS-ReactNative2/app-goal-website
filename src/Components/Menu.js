@@ -48,13 +48,13 @@ class Menu extends Component {
                             <a className="nav-link" href="#">CONTATO</a>
                         </li>
                     </ul>
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
+                    <ul className="navbar-nav d-inline-block">
+                        <li className="nav-item d-inline-block p-1">
                             <a className="nav-link" href="#">
                                 <FontAwesomeIcon icon={faFacebook} style={{color: "#0090d2"}} size={'2x'}/>
                             </a>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item d-inline-block p-1">
                             <a className="nav-link" href="#">
                                 <FontAwesomeIcon icon={faInstagram} style={{color: "#d40827"}} size={'2x'}/>
                             </a>
