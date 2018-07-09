@@ -1,0 +1,12 @@
+.divider-vertical {
+    height: 4em;
+    margin: 0 9px;
+    border-left: 1px solid #F2F2F2;
+    border-right: 1px solid #FFF;
+}
+
+nav {
+    font-family: 'Questrial', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+}
