@@ -62,8 +62,6 @@ class Menu extends Component {
                     </ul>
                 </div>
             </nav>
-
-
         )
     }
 }
