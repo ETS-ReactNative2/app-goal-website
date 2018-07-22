@@ -19,11 +19,13 @@ class Menu extends Component {
                      {
                          paddingLeft: '50px',
                          paddingRight: '50px',
+                         paddingTop: 0,
+                         paddingBottom: 0,
                          backgroundColor: '#000000'
                      }
                  }>
                 <a className="navbar-brand" href="#">
-                    <img style={{maxHeight: '50px'}} src={require('../goal_logo_2.png')}/>
+                    <img style={{maxHeight: '50px'}} src={require('../goal_logo_2_just2.png')}/>
                 </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -48,15 +50,15 @@ class Menu extends Component {
                             <a className="nav-link" href="#">CONTATO</a>
                         </li>
                     </ul>
-                    <ul className="navbar-nav d-inline-block">
-                        <li className="nav-item d-inline-block p-1">
+                    <ul className="navbar-nav d-inline-block" id='social-icons-group'>
+                        <li className="nav-item d-inline-block p-1 social-icons">
                             <a className="nav-link" href="#">
-                                <FontAwesomeIcon icon={faFacebook} style={{color: "#0090d2"}} size={'2x'}/>
+                                <FontAwesomeIcon icon={faFacebook} style={{color: "#ffffff"}}/>
                             </a>
                         </li>
-                        <li className="nav-item d-inline-block p-1">
+                        <li className="nav-item d-inline-block p-1 social-icons">
                             <a className="nav-link" href="#">
-                                <FontAwesomeIcon icon={faInstagram} style={{color: "#d40827"}} size={'2x'}/>
+                                <FontAwesomeIcon icon={faInstagram} style={{color: "#ffffff"}}/>
                             </a>
                         </li>
                     </ul>
