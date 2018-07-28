@@ -15,7 +15,7 @@ class About extends Component {
         color: '#767676',
         marginBottom: '2.3125rem',
         borderLeft: '2px solid',
-        zIndex: -1
+        zIndex: -999
     }
 
     render() {
@@ -33,6 +33,7 @@ class About extends Component {
                             <p>Nullam at tellus a ante dictum sagittis. Aenean malesuada, turpis non aliquam blandit,
                                 Aenean malesuada, turpis non aliquam blandit, Aenean malesuada, turpis non aliquam blandit
                                 nisl dui pellentesque tortor, malesuada consectetur sem lectus sed lacus.</p>
+                            <small>by <cite>Winston Churchill</cite></small>
                         </blockquote>
                     </div>
                 </div>
