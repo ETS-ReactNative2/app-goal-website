@@ -1,20 +1,14 @@
-@media (min-width: 800px) {
-    .top_image {
-        background-image: url('../images/house.jpg');
-        height: 300px;
-    }
+#carousel-first {
+    background-image: url('../images/banner/original_1.jpg') !important;
+    background-size: cover;
 }
 
-@media (max-width: 800px) {
-    .top_image {
-        background-image: url('../images/house_min.jpg');
-        height: 200px;
-    }
+#carousel-second {
+    background-image: url('../images/banner/original_2.jpg') !important;
+    background-size: cover;
 }
 
-.top_image {
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 100% auto;
-    background-attachment: fixed;
+#carousel-third {
+    background-image: url('../images/banner/original_3.jpg') !important;
+    background-size: cover;
 }

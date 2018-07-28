@@ -35,16 +35,19 @@ class Menu extends Component {
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <a className="nav-link " href="#">HOME</a>
+                            <a className="nav-link " href="#home">HOME</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">PROJETOS</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">QUEM SOMOS</a>
+                            <a className="nav-link" href="#who-we-are">QUEM SOMOS</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">PARCEIROS</a>
+                            <a className="nav-link" href="#testimonials">DEPOIMENTOS</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">PARCEIRO</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">CONTATO</a>

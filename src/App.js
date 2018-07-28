@@ -5,6 +5,7 @@ import { StickyContainer, Sticky } from 'react-sticky';
 import MapContainer from './Containers/MapContainer'
 
 import Image from "./Components/Image";
+import Testimonial from "./Components/Testimonial";
 
 class App extends Component {
     render() {
@@ -21,6 +22,7 @@ class App extends Component {
                         )}
                     </Sticky>
                     <About style={{zIndex:-9999}}></About>
+                    <Testimonial style={{zIndex:-9999}}></Testimonial>
                     <MapContainer></MapContainer>
                 </StickyContainer>
             </div>
