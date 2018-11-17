@@ -6,6 +6,9 @@ import MapContainer from './Containers/MapContainer'
 
 import Image from "./Components/Image";
 import Testimonial from "./Components/Testimonial";
+import Contact from "./Components/Contact";
+
+import './App.css'
 
 class App extends Component {
     render() {
@@ -14,15 +17,16 @@ class App extends Component {
                 <Image></Image>
                 <StickyContainer>
                     <Sticky
-                        style={{zIndex: 99}}>
+                        style={{zIndex: 1000}}>
                         {({style}) => (
-                            <div style={style}>
-                                <Menu/>
+                            <div id='nav-bar-full' style={style}>
+                                <Menu></Menu>
                             </div>
                         )}
                     </Sticky>
-                    <About style={{zIndex:-9999}}></About>
-                    <Testimonial style={{zIndex:-9999}}></Testimonial>
+                    <About></About>
+                    <Contact></Contact>
+                    <Testimonial></Testimonial>
                     <MapContainer></MapContainer>
                 </StickyContainer>
             </div>
