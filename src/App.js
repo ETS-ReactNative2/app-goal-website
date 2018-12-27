@@ -8,6 +8,7 @@ import MapContainer from './Containers/MapContainer'
 import Image from "./Components/Image";
 import Testimonial from "./Components/Testimonial";
 import Contact from "./Components/Contact";
+import Projects from "./Components/Projects";
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import './App.css'
@@ -26,8 +27,9 @@ const App = ({headerHeight}) =>
                     )}
                 </Sticky>
                 <About/>
-                <Contact/>
+                <Projects/>
                 <Testimonial/>
+                <Contact/>
                 {/*<MapContainer/>*/}
             </StickyContainer>
         </div>
