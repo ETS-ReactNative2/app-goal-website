@@ -4,3 +4,10 @@
 #nav-bar-full {
   z-index: 100 !important;
 }
+
+body,
+html,
+#root {
+  height: 100%;
+  overflow: hidden;
+}

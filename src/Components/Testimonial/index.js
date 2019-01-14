@@ -1,5 +1,5 @@
 import React from 'react'
-import pageHeight from "../pageHeight"
+import Page from "../Page"
 import './Testimonial.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons"
@@ -60,4 +60,4 @@ const WhoWeAre = ({headerHeight, windowHeight : height}) =>
         </div>
     )
 
-export default pageHeight(WhoWeAre);
+export default Page(WhoWeAre);

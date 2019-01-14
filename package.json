@@ -17,7 +17,8 @@
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.1",
     "react-scripts": "^2.1.1",
-    "react-sticky": "^6.0.3"
+    "react-sticky": "^6.0.3",
+    "react-swipe-events": "^1.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

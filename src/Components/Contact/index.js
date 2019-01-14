@@ -1,5 +1,5 @@
 import React from "react";
-import pageHeight from "../pageHeight";
+import Page from "../Page";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPhone,
@@ -94,4 +94,4 @@ const Contact = ({ windowHeight: height, headerHeight }) => (
   </div>
 );
 
-export default pageHeight(Contact);
+export default Page(Contact);

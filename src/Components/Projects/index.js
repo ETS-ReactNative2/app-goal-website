@@ -1,5 +1,5 @@
 import React from "react";
-import pageHeight from "../pageHeight";
+import Page from "../Page";
 import AlbumCollection from "./AlbumCollection";
 import "./Projects.css";
 
@@ -35,7 +35,7 @@ class Projects extends React.Component {
   }
 }
 
-export default pageHeight(Projects);
+export default Page(Projects);
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
