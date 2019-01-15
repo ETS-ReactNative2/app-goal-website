@@ -1,0 +1,20 @@
+#carousel {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#carousel-first {
+  background-image: url("../../images/banner/original_1.jpg") !important;
+  background-size: cover;
+}
+
+#carousel-second {
+  background-image: url("../../images/banner/original_2.jpg") !important;
+  background-size: cover;
+}
+
+#carousel-third {
+  background-image: url("../../images/banner/original_3.jpg") !important;
+  background-size: cover;
+}

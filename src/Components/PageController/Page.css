@@ -1,0 +1,16 @@
+.page-controller {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.page-container {
+  width: 100%;
+  position: fixed;
+  transition: all 500ms ease;
+  background-color: white;
+}
+
+.page-container .page-wrapper {
+  overflow: hidden auto;
+}

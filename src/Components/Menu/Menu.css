@@ -1,0 +1,61 @@
+.divider-vertical {
+  height: 4em;
+  margin: 0 9px;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #fff;
+}
+
+nav {
+  font-family: "Questrial", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#navbarNavDropdown li {
+  padding-left: 1.6rem;
+}
+
+.social-icons {
+  font-size: 1.5rem;
+}
+
+#social-icons-group {
+  padding-left: 1rem;
+}
+
+#menu {
+  position: fixed;
+  z-index: 1;
+  transition: all 500ms ease;
+}
+
+#menu #nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease;
+  padding: 10px;
+  background-color: rgba(100, 100, 100, 0.7);
+}
+
+#menu #nav > div {
+  background-color: black;
+  padding: 10px;
+  height: 100%;
+  border-radius: 5px;
+}
+
+#menu #nav > div ul {
+  width: 100%;
+}
+
+#menu #nav > div ul li {
+  padding: 0;
+  background-color: transparent;
+}
+
+#menu #nav > div ul li A{
+  color: white;
+}

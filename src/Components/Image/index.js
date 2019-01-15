@@ -1,14 +1,10 @@
 import React from "react";
-import pageHeight from "./pageHeight";
+import pageHeight from "../pageHeight";
 import "./Image.css";
 
 const Image = ({ headerHeight, windowHeight: height }) => (
-  <div
-    id="carouselExampleIndicators"
-    className="carousel slide"
-    data-ride="carousel"
-  >
-    <ol className="carousel-indicators">
+  <div id="carousel" className="carousel slide" data-ride="carousel">
+    <ol className="carousel-indicators" style={{ marginBottom: headerHeight }}>
       <li
         data-target="#carouselExampleIndicators"
         data-slide-to="0"
@@ -22,21 +18,21 @@ const Image = ({ headerHeight, windowHeight: height }) => (
         <div
           id="carousel-first"
           className="d-block w-100"
-          style={{ height: height - headerHeight }}
+          style={{ height, paddingBottom: headerHeight }}
         />
       </div>
       <div className="carousel-item">
         <div
           id="carousel-second"
           className="d-block w-100"
-          style={{ height: height - headerHeight }}
+          style={{ height, paddingBottom: headerHeight }}
         />
       </div>
       <div className="carousel-item">
         <div
           id="carousel-third"
           className="d-block w-100"
-          style={{ height: height - headerHeight }}
+          style={{ height, paddingBottom: headerHeight }}
         />
       </div>
     </div>

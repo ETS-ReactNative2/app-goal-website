@@ -1,23 +1,36 @@
-import React from "react";
+import React, { Component } from "react";
+import cn from "classnames";
 import pageHeight from "../pageHeight";
-import "./Page.css";
 
-const P = Component => {
-  class C extends React.Component {
-    render() {
-      const { headerHeight: paddingTop, windowHeight: height } = this.props;
-      return (
-        <div className="page-container" style={{ paddingTop, height }}>
-          <Component />
-        </div>
-      );
-    }
+class Page extends Component {
+  render() {
+    const {
+      offsetTop: top,
+      headerHeight: paddingTop,
+      windowHeight: height,
+      children
+    } = this.props;
+    return (
+      <div
+        className="page-container"
+        style={{
+          top
+        }}
+      >
+        {React.Children.map(children, child =>
+          React.cloneElement(child, {
+            ...child.props,
+            className: cn(child.props.className, "page-wrapper"),
+            style: { ...child.props.style, maxHeight: height, paddingTop }
+          })
+        )}
+      </div>
+    );
   }
-  return pageHeight(C);
+}
+
+Page.defaultProps = {
+  offsetTop: 0
 };
 
-const Page = () => {
-  return P;
-};
-
-export default Page;
+export default pageHeight(Page);

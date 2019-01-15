@@ -17,25 +17,23 @@ const albuns = [10, 20, 30, 40, 50, 60, 70, 80].map(n => {
 
 class Projects extends React.Component {
   render() {
-    const { windowHeight: height, headerHeight } = this.props;
+    const { offsetTop } = this.props;
     return (
-      <div
-        id="projects"
-        className="Projects container-fluid"
-        style={{ height, paddingTop: headerHeight }}
-      >
-        <div className="mx-auto h-50 d-flex flex-column justify-content-center align-content-center">
-          <div className="title-section">
-            <h2>Projetos</h2>
+      <Page offsetTop={offsetTop}>
+        <div id="projects" className="Projects container-fluid">
+          <div className="mx-auto h-50 d-flex flex-column justify-content-center align-content-center">
+            <div className="title-section">
+              <h2>Projetos</h2>
+            </div>
+            <AlbumCollection albuns={albuns} />
           </div>
-          <AlbumCollection albuns={albuns} />
         </div>
-      </div>
+      </Page>
     );
   }
 }
 
-export default Page(Projects);
+export default Projects;
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
