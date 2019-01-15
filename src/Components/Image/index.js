@@ -1,61 +1,69 @@
 import React from "react";
+import cn from "classnames";
+import Page from "../Page";
 import pageHeight from "../pageHeight";
 import "./Image.css";
 
-const Image = ({ headerHeight, windowHeight: height }) => (
-  <div id="carousel" className="carousel slide" data-ride="carousel">
-    <ol className="carousel-indicators" style={{ marginBottom: headerHeight }}>
-      <li
-        data-target="#carouselExampleIndicators"
-        data-slide-to="0"
-        className="active"
-      />
-      <li data-target="#carouselExampleIndicators" data-slide-to="1" />
-      <li data-target="#carouselExampleIndicators" data-slide-to="2" />
-    </ol>
-    <div className="carousel-inner">
-      <div className="carousel-item active">
-        <div
-          id="carousel-first"
-          className="d-block w-100"
-          style={{ height, paddingBottom: headerHeight }}
-        />
-      </div>
-      <div className="carousel-item">
-        <div
-          id="carousel-second"
-          className="d-block w-100"
-          style={{ height, paddingBottom: headerHeight }}
-        />
-      </div>
-      <div className="carousel-item">
-        <div
-          id="carousel-third"
-          className="d-block w-100"
-          style={{ height, paddingBottom: headerHeight }}
-        />
-      </div>
-    </div>
-    <a
-      className="carousel-control-prev"
-      href="#carouselExampleIndicators"
-      role="button"
-      data-slide="prev"
-    >
-      <span className="carousel-control-prev-icon" aria-hidden="true" />
-      <span className="sr-only">Previous</span>
-    </a>
-    <a
-      className="carousel-control-next"
-      href="#carouselExampleIndicators"
-      role="button"
-      data-slide="next"
-    >
-      <span className="carousel-control-next-icon" aria-hidden="true" />
-      <span className="sr-only">Next</span>
-    </a>
-  </div>
-);
+class Image extends React.Component {
+  state = {
+    current: 0,
+    items: [
+      { id: "carousel-first" },
+      { id: "carousel-second" },
+      { id: "carousel-third" }
+    ]
+  };
+
+  prev() {
+    let { current } = this.state;
+    current -= 1;
+    if (current < 0) current = 2;
+    this.setState({ current });
+  }
+
+  next() {
+    let { current } = this.state;
+    current += 1;
+    if (current > 2) current = 0;
+    this.setState({ current });
+  }
+
+  componentDidMount() {
+    setInterval(() => {
+      this.next();
+    }, 5000);
+  }
+
+  render() {
+    const { offsetTop, headerHeight, windowHeight: height } = this.props;
+    const { items, current } = this.state;
+    return (
+      <Page
+        id="image"
+        offsetTop={offsetTop}
+        withHeader={false}
+        classes={{ wrapper: "p-0 overflow-hidden h-100" }}
+      >
+        <div className="slider-container">
+          <div className="slider-wrapper">
+            {items.map((item, index) => (
+              <div
+                className="slider-item"
+                style={{ left: `${(index - current) * 100}%` }}
+              >
+                <div
+                  id={item.id}
+                  className="d-block w-100"
+                  style={{ height, paddingBottom: headerHeight }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </Page>
+    );
+  }
+}
 
 Image.defaultProps = {
   headerHeight: 60,

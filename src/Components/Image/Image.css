@@ -18,3 +18,24 @@
   background-image: url("../../images/banner/original_3.jpg") !important;
   background-size: cover;
 }
+.overflow-hidden {
+  overflow: hidden;
+}
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-container .slider-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-container .slider-wrapper .slider-item {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: left 700ms ease;
+}

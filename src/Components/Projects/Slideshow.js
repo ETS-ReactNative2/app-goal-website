@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
+import cn from "classnames";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -14,8 +15,15 @@ class Slideshow extends Component {
     this.state = {
       fotoAtual: 0,
       figContentWidth: 256,
-      thumbnailWidth: 64
+      thumbnailWidth: 64,
+      slideshowOpen: false
     };
+  }
+
+  componentWillReceiveProps({ open }) {
+    if (open && !this.state.slideshowOpen) {
+      this.setState({ slideshowOpen: true });
+    }
   }
 
   componentDidMount() {
@@ -45,7 +53,10 @@ class Slideshow extends Component {
 
   handleClose(e, force = false) {
     if (e.target === e.currentTarget || force) {
-      this.props.onClose(e);
+      this.setState({ slideshowOpen: false });
+      setTimeout(() => {
+        this.props.onClose(e);
+      }, 700);
     }
   }
 
@@ -74,11 +85,16 @@ class Slideshow extends Component {
   }
 
   render() {
+    const { open } = this.props;
     return (
       <ReactCSSTransitionGroup
         transitionName="slide"
         transitionEnterTimeout={700}
-        transitionLeaveTimeout={700}
+        transitionLeaveTimeout={400}
+        id="slideshow"
+        component="div"
+        className={cn(open && "open")}
+        onClick={this.handleClose.bind(this)}
       >
         {this.renderSlideshow()}
       </ReactCSSTransitionGroup>
@@ -86,14 +102,19 @@ class Slideshow extends Component {
   }
 
   renderSlideshow() {
-    const { fotoAtual, thumbnailWidth, figContentWidth } = this.state;
-    const { open, album } = this.props;
-    if (!open) return null;
+    const {
+      slideshowOpen,
+      fotoAtual,
+      thumbnailWidth,
+      figContentWidth
+    } = this.state;
+    const { album } = this.props;
+    if (!slideshowOpen) return null;
     return (
-      <div id="slideshow" onClick={this.handleClose.bind(this)}>
-        <div className="slideshow-wrapper">
-          <div className="d-flex justify-content-between w-100 p-2">
-            <h3>{album.titulo}</h3>
+      <Fragment>
+        <div className="slideshow-wrapper justify-content-between">
+          <div className="d-flex justify-content-between align-items-center w-100 p-2 m-0">
+            <h6>{album.titulo}</h6>
             <div
               className="close-slide p-2"
               onClick={e => this.handleClose(e, true)}
@@ -139,7 +160,7 @@ class Slideshow extends Component {
             )}
           </div>
         </div>
-      </div>
+      </Fragment>
     );
   }
 }

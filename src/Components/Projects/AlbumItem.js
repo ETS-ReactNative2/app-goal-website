@@ -1,13 +1,15 @@
 import React from "react";
+import cn from "classnames";
+import { isMobile } from "react-device-detect";
 
 const AlbumItem = ({ album, onClick }) => (
   <div
     className="album-item position-relative d-flex"
-    style={{ width: 280, height: 220 }}
+    style={{ width: 140, height: 110 }}
     onClick={() => onClick(album)}
   >
     <div className="position-absolute d-flex w-100 h-100">
-      <figure className="position-absolute">
+      <figure className={cn("position-absolute", isMobile && "isMobile")}>
         <img src={album.capa} alt="" />
       </figure>
       <h6

@@ -1,14 +1,8 @@
 import React, { Component } from "react";
 import AlbumItem from "./AlbumItem";
-import Slideshow from "./Slideshow";
 
 class AlbumCollection extends Component {
-  state = {
-    slideShowOpen: false,
-    albumSelected: null
-  };
   render() {
-    const { slideShowOpen, albumSelected } = this.state;
     const { albuns } = this.props;
     return (
       <div className="w-100 d-flex justify-content-center flex-column flex-md-row align-content-center mx-auto">
@@ -20,21 +14,10 @@ class AlbumCollection extends Component {
             <AlbumItem
               key={key}
               album={album}
-              onClick={albumSelected => {
-                this.setState({ slideShowOpen: true, albumSelected });
-              }}
+              onClick={this.props.onSelectAlbum}
             />
           ))}
         </div>
-        <Slideshow
-          open={slideShowOpen}
-          album={albumSelected}
-          onClose={() =>
-            this.setState({
-              slideShowOpen: false
-            })
-          }
-        />
       </div>
     );
   }

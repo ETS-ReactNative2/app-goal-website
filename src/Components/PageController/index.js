@@ -1,6 +1,7 @@
 import React from "react";
 import pageHeight from "../pageHeight";
 import Menu from "../Menu";
+import Image from "../Image";
 import About from "../About";
 import Testimonial from "../Testimonial";
 import Contact from "../Contact";
@@ -27,7 +28,7 @@ class PageController extends React.Component {
     clearTimeout(this.scrollListenerTimeout);
     this.scrollListenerTimeout = setTimeout(() => {
       this.changePage();
-    }, 30);
+    }, 20);
   }
 
   changePage() {
@@ -94,11 +95,15 @@ class PageController extends React.Component {
     const { windowHeight: height } = this.props;
     const { page } = this.state;
     return (
-      <div className="page-controller" style={{ height: height * 5 }}>
+      <div
+        className="page-controller"
+        style={{ height: height * 5 }}
+      >
         <Menu
           bottom={page === 0}
           selectPage={this.handleSelectPage.bind(this)}
         />
+        <Image offsetTop={this.getOffsetTop(0)} />
         <About offsetTop={this.getOffsetTop(1)} />
         <Projects offsetTop={this.getOffsetTop(2)} />
         <Testimonial offsetTop={this.getOffsetTop(3)} />
