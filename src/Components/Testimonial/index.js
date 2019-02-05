@@ -30,8 +30,7 @@ const Testimonial = ({ offsetTop }) => (
               <p className="testimonial">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu
                 sem tempor, varius quam at, luctus dui. Mauris magna metus,
-                dapibus nec turpis vel, semper malesuada ante. Idac bibendum
-                scelerisque non non purus. Suspendisse varius nibh non aliquet.
+                dapibus nec turpis vel, semper malesuada ante.
               </p>
               <p className="overview">
                 <b>Paula Wilson</b>, Media Analyst

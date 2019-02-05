@@ -17,11 +17,15 @@ class Page extends Component {
         className={cn("page-container", className)}
         style={{
           ...props.style,
-          top,
-          paddingTop: withHeader ? 60 : 0
+          top
         }}
       >
-        <div className={cn("page-wrapper", classes.wrapper)}>{children}</div>
+        <div className={cn("page-wrapper", classes.wrapper)}>
+          <div style={{ minHeight: withHeader ? 60 : 0 }} />
+          <div className="page-content" style={{ height: "calc(100% - 60px)" }}>
+            {children}
+          </div>
+        </div>
       </div>
     );
   }

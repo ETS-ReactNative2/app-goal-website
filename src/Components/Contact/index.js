@@ -10,17 +10,14 @@ import "./Contact.css";
 
 const Contact = ({ offsetTop }) => (
   <Page id="contact" offsetTop={offsetTop}>
-    <div className="mx-auto h-100 d-flex flex-column justify-content-center align-content-center">
+    <div className="my-auto">
       <div className="title-section">
         <h2>Contato</h2>
       </div>
-      <div
-        className="w-100 d-flex justify-content-center flex-column flex-md-row align-content-center mx-auto"
-        style={{ maxWidth: 768 }}
-      >
+      <div className="w-100 mx-auto" style={{ maxWidth: 768 }}>
         <div className="p-2" style={{ width: "100%" }}>
           <form className="d-flex flex-column justify-content-between h-100">
-            <div className="mb-3">
+            <div className="mb-2">
               <input
                 type="text"
                 className="form-control"
@@ -28,7 +25,7 @@ const Contact = ({ offsetTop }) => (
                 placeholder="Nome"
               />
             </div>
-            <div className="mb-3">
+            <div className="mb-2">
               <input
                 type="email"
                 className="form-control"
@@ -36,7 +33,7 @@ const Contact = ({ offsetTop }) => (
                 placeholder="Email"
               />
             </div>
-            <div className="mb-3">
+            <div className="mb-2">
               <input
                 type="email"
                 className="form-control"
@@ -45,7 +42,7 @@ const Contact = ({ offsetTop }) => (
               />
             </div>
 
-            <div className="mb-3">
+            <div className="mb-2">
               <textarea
                 className="form-control"
                 placeholder="Mensagem"

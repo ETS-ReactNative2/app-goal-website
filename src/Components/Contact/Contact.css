@@ -1,43 +1,43 @@
 #contact {
-    background: #0A1414;
-    color: white;
+  background: #0a1414;
+  color: white;
 }
 
-#contact h2  {
-    color: white;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    position: relative;
-    margin: 30px 0 60px;
+#contact h2 {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  position: relative;
+  margin: 10px 0 30px;
 }
 
 #contact h2::after {
-    content: "";
-    width: 100px;
-    position: absolute;
-    margin: 0 auto;
-    height: 3px;
-    background: white;
-    left: 0;
-    right: 0;
-    bottom: -10px;
+  content: "";
+  width: 100px;
+  position: absolute;
+  margin: 0 auto;
+  height: 3px;
+  background: white;
+  left: 0;
+  right: 0;
+  bottom: -10px;
 }
 
 .Contact .form-control::placeholder {
-    color: whitesmoke;
+  color: whitesmoke;
 }
 
 .Contact .form-control {
-    color: white;
-    background-color: rgba(220,220,220,.1);
-    border-radius: 0;
-    border: 0;
-    border-bottom: 2px solid whitesmoke;
+  color: white;
+  background-color: rgba(220, 220, 220, 0.1);
+  border-radius: 0;
+  border: 0;
+  border-bottom: 2px solid whitesmoke;
 }
 
 .Contact button.form-control {
-    color: black;
-    background-color: rgba(220,220,220,1);
+  color: black;
+  background-color: rgba(220, 220, 220, 1);
 }

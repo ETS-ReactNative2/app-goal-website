@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import pageHeight from "../pageHeight";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram } from "@fortawesome/fontawesome-free-brands";
 import logo from "../../goal_logo_2_just2.png";
+import Nav from "./Nav";
 import "./Menu.css";
 
 class Menu extends Component {
@@ -43,77 +42,16 @@ class Menu extends Component {
         >
           <span className="navbar-toggler-icon" />
         </button>
+        <div id="nav-desktop" className="w-100 d-flex">
+          <Nav onMenuClick={this.handleMenuClick.bind(this)} inline />
+        </div>
         <div
-          id="nav"
+          id="nav-mobile"
           style={{ top: open ? 0 : "-100%" }}
           onClick={this.handleToggleMenu.bind(this)}
         >
           <div className="d-flex flex-column justify-content-between">
-            <ul className="list-group list-group-flush">
-              <li className="list-group-item">
-                <a
-                  href="#home"
-                  className="nav-link"
-                  onClick={this.handleMenuClick.bind(this)}
-                >
-                  HOME
-                </a>
-              </li>
-              <li className="list-group-item">
-                <a
-                  href="#sobre"
-                  className="nav-link"
-                  onClick={this.handleMenuClick.bind(this)}
-                >
-                  QUEM SOMOS
-                </a>
-              </li>
-              <li className="list-group-item">
-                <a
-                  href="#projetos"
-                  className="nav-link"
-                  onClick={this.handleMenuClick.bind(this)}
-                >
-                  PROJETOS
-                </a>
-              </li>
-              <li className="list-group-item">
-                <a
-                  href="#depoimentos"
-                  className="nav-link"
-                  onClick={this.handleMenuClick.bind(this)}
-                >
-                  DEPOIMENTOS
-                </a>
-              </li>
-              <li className="list-group-item">
-                <a
-                  href="#contato"
-                  className="nav-link"
-                  onClick={this.handleMenuClick.bind(this)}
-                >
-                  CONTATO
-                </a>
-              </li>
-            </ul>
-            <ul className="d-flex m-0 justify-content-end">
-              <li className="list-group-item social-icons">
-                <a className="nav-link" href="#">
-                  <FontAwesomeIcon
-                    icon={faFacebook}
-                    style={{ color: "#ffffff" }}
-                  />
-                </a>
-              </li>
-              <li className="list-group-item social-icons">
-                <a className="nav-link" href="#">
-                  <FontAwesomeIcon
-                    icon={faInstagram}
-                    style={{ color: "#ffffff" }}
-                  />
-                </a>
-              </li>
-            </ul>
+            <Nav onMenuClick={this.handleMenuClick.bind(this)} />
           </div>
         </div>
       </nav>
