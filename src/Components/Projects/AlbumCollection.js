@@ -5,11 +5,11 @@ class AlbumCollection extends Component {
   render() {
     const { albuns } = this.props;
     return (
-      <div className="w-100 d-flex justify-content-center flex-column flex-md-row align-content-center mx-auto">
-        <div
-          className="album-container d-flex justify-content-center w-100"
-          style={{ maxWidth: 1120, flexWrap: "wrap", height: "fit-content" }}
-        >
+      <div
+        className="album-container pb-5"
+        style={{ height: `calc(100% - 80px)` }}
+      >
+        <div className="album-photos">
           {albuns.map((album, key) => (
             <AlbumItem
               key={key}

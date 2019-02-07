@@ -32,7 +32,7 @@ class Projects extends React.Component {
     return (
       <Fragment>
         <Page id="projetos" offsetTop={offsetTop}>
-          <div className="mx-auto h-50 d-flex flex-column align-content-center">
+          <div className="d-flex flex-column align-content-center h-100">
             <div className="title-section">
               <h2>Projetos</h2>
             </div>
