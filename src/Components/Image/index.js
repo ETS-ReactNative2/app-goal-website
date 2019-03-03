@@ -1,30 +1,25 @@
-import React from "react";
-import cn from "classnames";
-import Page from "../Page";
-import pageHeight from "../pageHeight";
-import "./Image.css";
+import React from 'react';
+import Page from '../Page';
+import pageHeight from '../pageHeight';
+import './Image.css';
 
 class Image extends React.Component {
   state = {
     current: 0,
-    items: [
-      { id: "carousel-first" },
-      { id: "carousel-second" },
-      { id: "carousel-third" }
-    ]
+    items: [{ id: 'carousel-first' }, { id: 'carousel-second' }]
   };
 
   prev() {
-    let { current } = this.state;
+    let { current, items } = this.state;
     current -= 1;
-    if (current < 0) current = 2;
+    if (current < 0) current = items.length - 1;
     this.setState({ current });
   }
 
   next() {
-    let { current } = this.state;
+    let { current, items } = this.state;
     current += 1;
-    if (current > 2) current = 0;
+    if (current > items.length - 1) current = 0;
     this.setState({ current });
   }
 
@@ -42,7 +37,7 @@ class Image extends React.Component {
         id="image"
         offsetTop={offsetTop}
         withHeader={false}
-        classes={{ wrapper: "p-0 overflow-hidden h-100" }}
+        classes={{ wrapper: 'p-0 overflow-hidden h-100' }}
       >
         <div className="slider-container">
           <div className="slider-wrapper">

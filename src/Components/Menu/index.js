@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import pageHeight from "../pageHeight";
-import logo from "../../goal_logo_2_just2.png";
-import Nav from "./Nav";
-import "./Menu.css";
+import React, { Component } from 'react';
+import pageHeight from '../pageHeight';
+import logo from '../../goal_logo_2_just2.png';
+import Nav from './Nav';
+import './Menu.css';
 
 class Menu extends Component {
   state = {
@@ -15,7 +15,7 @@ class Menu extends Component {
 
   handleMenuClick(e) {
     e.preventDefault();
-    const href = e.target.getAttribute("href");
+    const href = e.target.getAttribute('href');
     this.props.selectPage(href);
   }
 
@@ -27,14 +27,23 @@ class Menu extends Component {
         id="menu"
         className="navbar navbar-expand-lg navbar-dark w-100"
         style={{
-          padding: "0 10px",
-          backgroundColor: "#000000",
+          padding: '0 10px',
+          backgroundColor: '#000000',
           top: !this.props.bottom ? 0 : windowHeight - headerHeight
         }}
       >
-        <a className="navbar-brand" href="#">
-          <img style={{ maxHeight: "50px" }} src={logo} />
-        </a>
+        <button
+          type="button"
+          className="navbar-brand"
+          style={{
+            backgroundColor: 'transparent',
+            border: 0,
+            padding: 0,
+            cursor: 'pointer'
+          }}
+        >
+          <img style={{ maxHeight: '50px' }} src={logo} />
+        </button>
         <button
           className="navbar-toggler"
           type="button"
@@ -47,7 +56,7 @@ class Menu extends Component {
         </div>
         <div
           id="nav-mobile"
-          style={{ top: open ? 0 : "-100%" }}
+          style={{ top: open ? 0 : '-100%' }}
           onClick={this.handleToggleMenu.bind(this)}
         >
           <div className="d-flex flex-column justify-content-between">

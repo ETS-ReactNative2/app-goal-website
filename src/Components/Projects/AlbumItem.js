@@ -1,6 +1,4 @@
-import React from "react";
-import cn from "classnames";
-import { isMobile } from "react-device-detect";
+import React from 'react';
 
 const AlbumItem = ({ album, onClick }) => (
   <div
@@ -11,8 +9,8 @@ const AlbumItem = ({ album, onClick }) => (
     <h6
       className="position-absolute text-white mt-auto ml-auto mb-0 p-2 text-uppercase font-weight-bold"
       style={{
-        textShadow: "0 0 5px black",
-        textAlign: "right",
+        textShadow: '0 0 5px black',
+        textAlign: 'right',
         zIndex: 1
       }}
     >
